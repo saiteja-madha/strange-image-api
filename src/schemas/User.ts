@@ -61,7 +61,7 @@ export default {
         const EncodedUserID = Buffer.from(user._id.toString()).toString("base64");
         log(
             `Token ${created ? "created" : "regenerated"}`,
-            `**Discord ID:** ${discordId}\n**Username:** ${username}\n**Source:** ${src}}`,
+            `**Discord ID:** ${discordId}\n**Username:** ${username}\n**Source:** ${src}`,
         );
         return `${EncodedUserID}.${user.token}`;
     },
