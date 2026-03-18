@@ -1,6 +1,6 @@
 {
     "name": "strange-image-api",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "Image Manipulation/Generation API",
     "main": "dist/src/server.js",
     "engines": {
@@ -12,8 +12,7 @@
         "dev:watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec yarn run dev",
         "build": "rimraf ./dist && tsc",
         "package": "yarn run build && tar -cf strange-api.tar assets dist public views Dockerfile package.json yarn.lock",
-        "format": "prettier --write \"src/**/*.{ts,js,json}\"",
-        "tar:test": "tar -cf test.tar assets dist public views Dockerfile package.json yarn.lock"
+        "format": "prettier --write \"src/**/*.{ts,js,json}\""
     },
     "author": "Sai Teja M",
     "license": "ISC",

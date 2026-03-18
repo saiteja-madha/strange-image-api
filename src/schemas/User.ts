@@ -7,7 +7,7 @@ interface IUser {
     _id: mongoose.Types.ObjectId;
     discord_id: string;
     username: string;
-    token?: string;
+    token?: string | null;
 }
 
 const userSchema = new mongoose.Schema(
