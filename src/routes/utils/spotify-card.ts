@@ -62,8 +62,8 @@ export default async (req: Request, res: Response): Promise<any> => {
         const end = req.query.end;
         const title = req.query.title;
 
-        if (!isNaN(Number(start))) return ResponseUtil.badRequest(res, "start must be a number");
-        if (!isNaN(Number(end))) return ResponseUtil.badRequest(res, "end must be a number");
+        if (isNaN(Number(start))) return ResponseUtil.badRequest(res, "start must be a number");
+        if (isNaN(Number(end))) return ResponseUtil.badRequest(res, "end must be a number");
 
         if (!image || !author || !album || !start || !end || !title) {
             return ResponseUtil.missingParams(res, "image", "author", "album", "start", "end", "title");
